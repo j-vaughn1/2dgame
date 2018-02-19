@@ -7,7 +7,7 @@ public class Ammo : MonoBehaviour {
 
 
     void Start () {
-        Destroy(gameObject, 10);  // in the air for more than 10 seconds, kill it.
+       
     }
 
     void OnExplode()
