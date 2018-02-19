@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Movement))]
 public class PlayerMover : MonoBehaviour {
     Movement moveScr;
 
