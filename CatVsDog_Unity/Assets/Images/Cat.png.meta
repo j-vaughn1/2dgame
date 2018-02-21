@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: dbdf5c4b3a912bf4f9f9af58c102b44f
-timeCreated: 1518997845
+timeCreated: 1519069786
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -18,6 +18,20 @@ TextureImporter:
     21300022: Cat_Tail
     21300024: Cat_Eye_Hit
     21300026: Cat_Mouth_Sad
+    21300028: Ear_Front
+    21300030: Ear_Back
+    21300032: Head
+    21300034: Eye_Back
+    21300036: Eye
+    21300038: Mouth
+    21300040: Arm
+    21300042: Torso
+    21300044: Eye_Squint
+    21300046: Mouth_Happy
+    21300048: Foot
+    21300050: Tail
+    21300052: Eye_Hit
+    21300054: Mouth_Sad
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -114,197 +128,197 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cat_Ear_Front
+      name: Ear_Front
       rect:
         serializedVersion: 2
-        x: 11
-        y: 720
-        width: 192
-        height: 298
-      alignment: 9
-      pivot: {x: 0.6345032, y: 0.26915643}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Cat_Ear_Back
-      rect:
-        serializedVersion: 2
-        x: 429
-        y: 721
-        width: 177
-        height: 243
-      alignment: 9
-      pivot: {x: 0.4600068, y: 0.2833277}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Cat_Head
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 281
-        width: 577
-        height: 424
-      alignment: 9
-      pivot: {x: 0.571133, y: 0.113844745}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Cat_Eye_BG
-      rect:
-        serializedVersion: 2
-        x: 660
-        y: 440
-        width: 107
-        height: 109
+        x: 8
+        y: 731
+        width: 200
+        height: 308
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cat_Eye
+      name: Ear_Back
       rect:
         serializedVersion: 2
-        x: 688
-        y: 331
-        width: 83
-        height: 84
+        x: 432
+        y: 728
+        width: 186
+        height: 253
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cat_Mouth
+      name: Head
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 279
+        width: 602
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eye_Back
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 447
+        width: 108
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eye
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 336
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Mouth
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 292
+        width: 124
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Arm
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 137
+        width: 140
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Torso
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 16
+        width: 201
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eye_Squint
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 198
+        width: 109
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Mouth_Happy
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 154
+        width: 100
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Foot
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 114
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Tail
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 13
+        width: 183
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eye_Hit
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 11
+        width: 119
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Mouth_Sad
       rect:
         serializedVersion: 2
         x: 790
-        y: 292
-        width: 82
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Cat_Arm
-      rect:
-        serializedVersion: 2
-        x: 141
-        y: 135
-        width: 132
-        height: 113
-      alignment: 9
-      pivot: {x: 0.9265624, y: 0.8749129}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Cat_Torso
-      rect:
-        serializedVersion: 2
-        x: 321
-        y: 19
-        width: 192
-        height: 238
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Cat_Eye_Squint
-      rect:
-        serializedVersion: 2
-        x: 660
-        y: 195
-        width: 107
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Cat_Mouth_Happy
-      rect:
-        serializedVersion: 2
-        x: 792
-        y: 157
-        width: 89
+        y: 3
+        width: 103
         height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Cat_Foot
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 11
-        width: 106
-        height: 167
-      alignment: 9
-      pivot: {x: 0.63662976, y: 0.790334}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Cat_Tail
-      rect:
-        serializedVersion: 2
-        x: 134
-        y: 17
-        width: 173
-        height: 112
-      alignment: 9
-      pivot: {x: 0.89309835, y: 0.6574213}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Cat_Eye_Hit
-      rect:
-        serializedVersion: 2
-        x: 655
-        y: 11
-        width: 117
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Cat_Mouth_Sad
-      rect:
-        serializedVersion: 2
-        x: 782
-        y: 10
-        width: 93
-        height: 101
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

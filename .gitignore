@@ -3,6 +3,8 @@
 # =============== #
 CatVsDog_Unity/Temp/
 CatVsDog_Unity/Obj/
+CatVsDog_Unity/Build/
+CatVsDog_Unity/Builds/
 CatVsDog_Unity/UnityGenerated/
 CatVsDog_Unity/Library/EditorInstance.json
 CatVsDog_Unity/Library/CurrentLayout.dwlt
