@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Floor
   - Bone
+  - Fire
+  - Wall
   layers:
   - Default
   - TransparentFX

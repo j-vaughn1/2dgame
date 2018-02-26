@@ -4,38 +4,29 @@ using UnityEngine;
 public class Ammo : MonoBehaviour {
 
     public GameObject boneAmmo;
+    public GameObject explosionBone;
 
 
-    void Start () {
-       
-    }
 
     void OnExplode()
     {
-
         Quaternion randomRotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
-
-        Instantiate(boneAmmo, transform.position, randomRotation); // Particle effect post explosion
+        Instantiate(explosionBone, transform.position, randomRotation); // Particle effect post explosion
+        Destroy(boneAmmo, 1);
+        Destroy(explosionBone, 2);
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnCollisionEnter2D(Collision col)
     {
-
-        if (col.tag == "Dog")
-        {
-            //decrease health
-
-            OnExplode();
-        }
-        else if(col.tag == "Cat")
-        {
-
-        }
-        else if(col.tag == "floor")
+        if (col.gameObject.tag == "Floor")
         {
             OnExplode();
         }
-        else { OnExplode(); }
+
+        if(col.gameObject.tag == "Wall")
+        {
+            OnExplode();
+        }
     
     }
 
