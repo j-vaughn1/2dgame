@@ -377,7 +377,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 2
 --- !u!114 &499677175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,9 +389,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de39a938184e65428b39cb258c6c5d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WalkSpeed: 5
-  Friction: 9
-  JumpSpeed: 30
+  WalkSpeed: 2
+  Friction: 5
+  JumpSpeed: 10
 --- !u!61 &499677176
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -890,7 +890,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1748110270}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f71e78ab75c90da47922519bf89d5be1, type: 3}
   m_Name: 
@@ -953,7 +953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WalkSpeed: 5
   Friction: 9
-  JumpSpeed: 30
+  JumpSpeed: 0
 --- !u!1 &1936748690
 GameObject:
   m_ObjectHideFlags: 0

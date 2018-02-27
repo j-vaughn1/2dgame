@@ -23,23 +23,17 @@ public class DogManager : MonoBehaviour
         if (Input.GetAxis("Horizontal") < 0)
         {
             dogMovement.WalkLeft();
-            anim.SetInteger("State", 1);
+            anim.SetInteger("D_State", 1);
         }
         // handling Cat moves right + animation
         else if (Input.GetAxis("Horizontal") > 0)
         {
             dogMovement.WalkRight();
-            anim.SetInteger("State", 1);
-        }
-        // handling Cat jumps + animation
-        else if (Input.GetButton("Jump"))
-        {
-            dogMovement.Jump();
-            anim.SetInteger("State", 2);
+            anim.SetInteger("D_State", 1);
         }
         else
         {
-            anim.SetInteger("State", 0);
+            anim.SetInteger("D_State", 0);
         }
     }
 }
