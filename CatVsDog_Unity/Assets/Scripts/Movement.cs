@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour {
     private bool tryJump;
     private WalkDirection walkDir;
 
-    public float WalkSpeed = 9f;
+    public float WalkSpeed = 5f;
     public float Friction = 9f;
     public float JumpSpeed = 30f;
 
