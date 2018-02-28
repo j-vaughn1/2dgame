@@ -10,14 +10,16 @@ public class TurnManager : MonoBehaviour {
     public PlayerMover catMover;
     public PlayerMover dogMover;
 
+    public BarUpdater turnBar;
+
     public bool catGoesFirst = true;
 
-    public float turnTime = 30; // In seconds
-    public float TurnEnumTime = 30; // In seconds
+    public float maxTurnTime = 30; // In seconds
+    public float currentTurnTime = 30; // In seconds
 
     private void StartTurn(TurnEnum newTurn) {
         currentTurn = newTurn;
-        TurnEnumTime = turnTime;
+        currentTurnTime = maxTurnTime;
         catMover.enabled = (currentTurn == TurnEnum.Cat);
         dogMover.enabled = (currentTurn == TurnEnum.Dog);
         if (currentTurn == TurnEnum.Cat)
@@ -45,11 +47,18 @@ public class TurnManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (TurnEnumTime >= 0)
-            TurnEnumTime -= Time.deltaTime;
+        if (currentTurnTime >= 0)
+            currentTurnTime -= Time.deltaTime;
+
+        turnBar.maxValue = maxTurnTime;
+        if (currentTurn != TurnEnum.None) {
+            turnBar.currentValue = currentTurnTime;
+        } else {
+            turnBar.currentValue = 0;
+        }
 
         // End of turn
-        if (TurnEnumTime <= 0) {
+        if (currentTurnTime <= 0) {
             // Stop player's turn
             if (currentTurn != TurnEnum.None) {
                 StartTurn(TurnEnum.None);
