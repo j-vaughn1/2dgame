@@ -10,9 +10,9 @@ public class Movement : MonoBehaviour {
     private bool tryJump;
     private WalkDirection walkDir;
 
-    public float WalkSpeed = 9f;
-    public float Friction = 9f;
-    public float JumpSpeed = 30f;
+    public float WalkSpeed = 2f;
+    public float Friction = 10f;
+    public float JumpSpeed = 10f;
 
     // Use this for initialization
     void Start () {
