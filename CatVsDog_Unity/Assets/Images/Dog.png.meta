@@ -1,24 +1,23 @@
 fileFormatVersion: 2
-guid: dbdf5c4b3a912bf4f9f9af58c102b44f
+guid: 54944a03ab7cf3244bd1c91c2c2b128f
 timeCreated: 1519713122
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Cat Ear_Front
-    21300002: Cat Ear_Back
-    21300004: Cat Head
-    21300006: Cat Eye_Back
-    21300008: Cat Eye
-    21300010: Cat Mouth
-    21300012: Cat Arm
-    21300014: Cat Torso
-    21300016: Cat Eye_Squint
-    21300018: Cat Mouth_Happy
-    21300020: Cat Leg
-    21300022: Cat Tail
-    21300024: Cat Eye_Hurt
-    21300026: Cat Mouth_Sad
-    21300028: Cat Nose
+    21300000: Dog Ear_Front
+    21300002: Dog Ear_Back
+    21300004: Dog Head
+    21300006: Dog Eye
+    21300008: Dog Mouth
+    21300010: Dog Arm
+    21300012: Dog Torso
+    21300014: Dog Eye_Squint
+    21300016: Dog Mouth_Happy
+    21300018: Dog Leg
+    21300020: Dog Tail
+    21300022: Dog Eye_Hurt
+    21300024: Dog Mouth_Sad
+    21300026: Dog Nose
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -115,67 +114,53 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cat Ear_Front
+      name: Dog Ear_Front
       rect:
         serializedVersion: 2
-        x: 69
-        y: 769
-        width: 199
-        height: 309
+        x: 47
+        y: 774
+        width: 208
+        height: 207
       alignment: 9
-      pivot: {x: 0.64670247, y: 0.25216743}
+      pivot: {x: 0.7237797, y: 0.3698176}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cat Ear_Back
+      name: Dog Ear_Back
       rect:
         serializedVersion: 2
-        x: 371
-        y: 767
-        width: 187
-        height: 253
+        x: 384
+        y: 771
+        width: 198
+        height: 208
       alignment: 9
-      pivot: {x: 0.42183045, y: 0.18944564}
+      pivot: {x: 0.32678208, y: 0.22910896}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cat Head
+      name: Dog Head
       rect:
         serializedVersion: 2
-        x: 20
-        y: 318
-        width: 601
-        height: 442
+        x: 29
+        y: 324
+        width: 584
+        height: 430
       alignment: 9
-      pivot: {x: 0.5, y: 0.1752396}
+      pivot: {x: 0.5, y: 0.16386485}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cat Eye_Back
-      rect:
-        serializedVersion: 2
-        x: 684
-        y: 464
-        width: 109
-        height: 110
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Cat Eye
+      name: Dog Eye
       rect:
         serializedVersion: 2
         x: 698
-        y: 355
+        y: 353
         width: 84
         height: 85
       alignment: 0
@@ -185,13 +170,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cat Mouth
+      name: Dog Mouth
       rect:
         serializedVersion: 2
-        x: 790
-        y: 309
-        width: 124
-        height: 88
+        x: 813
+        y: 312
+        width: 84
+        height: 85
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,7 +184,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cat Arm
+      name: Dog Arm
       rect:
         serializedVersion: 2
         x: 153
@@ -207,17 +192,17 @@ TextureImporter:
         width: 141
         height: 124
       alignment: 9
-      pivot: {x: 0.9456644, y: 0.8328744}
+      pivot: {x: 0.9169872, y: 0.8358595}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cat Torso
+      name: Dog Torso
       rect:
         serializedVersion: 2
         x: 337
-        y: 34
+        y: 32
         width: 201
         height: 248
       alignment: 0
@@ -227,7 +212,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cat Eye_Squint
+      name: Dog Eye_Squint
       rect:
         serializedVersion: 2
         x: 684
@@ -241,7 +226,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cat Mouth_Happy
+      name: Dog Mouth_Happy
       rect:
         serializedVersion: 2
         x: 814
@@ -255,7 +240,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cat Leg
+      name: Dog Leg
       rect:
         serializedVersion: 2
         x: 21
@@ -263,27 +248,27 @@ TextureImporter:
         width: 114
         height: 173
       alignment: 9
-      pivot: {x: 0.61986434, y: 0.899979}
+      pivot: {x: 0.6289372, y: 0.9106602}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cat Tail
+      name: Dog Tail
       rect:
         serializedVersion: 2
-        x: 145
-        y: 30
-        width: 184
-        height: 122
+        x: 174
+        y: 57
+        width: 155
+        height: 113
       alignment: 9
-      pivot: {x: 0.9131604, y: 0.635955}
+      pivot: {x: 0.895129, y: 0.47832036}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cat Eye_Hurt
+      name: Dog Eye_Hurt
       rect:
         serializedVersion: 2
         x: 680
@@ -297,7 +282,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cat Mouth_Sad
+      name: Dog Mouth_Sad
       rect:
         serializedVersion: 2
         x: 804
@@ -311,7 +296,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cat Nose
+      name: Dog Nose
       rect:
         serializedVersion: 2
         x: 813
