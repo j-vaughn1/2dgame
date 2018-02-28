@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CatManager : MonoBehaviour
-{
+[RequireComponent(typeof(Movement))]
+public class CatManager : MonoBehaviour {
     Animator anim;
     Movement catMovement;
     bool facingRight;
@@ -15,29 +15,20 @@ public class CatManager : MonoBehaviour
         catMovement = GetComponent<Movement>();
         facingRight = true;
 	}
-	
-	// Update is called once per frame
-	void FixedUpdate ()
-    {
-        // handling Cat moves left + animation
-        if (Input.GetAxis("Horizontal") < 0)
-        {
-            catMovement.WalkLeft();
-            anim.SetInteger("C_State", 1);
-            Flip(Input.GetAxis("Horizontal"));
 
-        }
-        // handling Cat moves right + animation
-        else if (Input.GetAxis("Horizontal") > 0)
-        {
-            catMovement.WalkRight();
+    public void FixedUpdate() {
+        switch (catMovement.getState()) {
+        case Movement.WalkDirection.Left:
             anim.SetInteger("C_State", 1);
-            Flip(Input.GetAxis("Horizontal"));
-        }
-        // handling Cat in Idle mode
-        else
-        {
+            Flip(-1);
+            break;
+        case Movement.WalkDirection.Right:
+            anim.SetInteger("C_State", 1);
+            Flip(1);
+            break;
+        case Movement.WalkDirection.None:
             anim.SetInteger("C_State", 0);
+            break;
         }
     }
 

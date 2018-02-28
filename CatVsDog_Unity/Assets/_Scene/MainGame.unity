@@ -611,10 +611,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 499677172}
-  - component: {fileID: 499677171}
-  - component: {fileID: 499677170}
   - component: {fileID: 499677173}
   - component: {fileID: 499677175}
+  - component: {fileID: 499677177}
+  - component: {fileID: 499677171}
+  - component: {fileID: 499677170}
   - component: {fileID: 499677174}
   - component: {fileID: 499677176}
   m_Layer: 8
@@ -737,12 +738,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 499677169}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7de39a938184e65428b39cb258c6c5d8, type: 3}
+  m_Script: {fileID: 11500000, guid: c021364c8713e88449e6ac8a30e37e34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WalkSpeed: 2
-  Friction: 5
-  JumpSpeed: 10
 --- !u!61 &499677176
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -768,6 +766,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 4.35}
   m_EdgeRadius: 0
+--- !u!114 &499677177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 499677169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de39a938184e65428b39cb258c6c5d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WalkSpeed: 5
+  Friction: 9
+  JumpSpeed: 0
 --- !u!1 &539092651
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,6 +992,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 587846084}
+  - component: {fileID: 587846085}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1000,6 +1013,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &587846085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 587846083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de26e462d675a4b4b8f3432c3d3b2008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  catMover: {fileID: 499677175}
+  dogMover: {fileID: 1748110278}
+  catGoesFirst: 1
+  turnTime: 10
+  TurnEnumTime: 30
 --- !u!1 &652231394
 GameObject:
   m_ObjectHideFlags: 0
@@ -2854,11 +2883,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1748110273}
+  - component: {fileID: 1748110274}
+  - component: {fileID: 1748110278}
+  - component: {fileID: 1748110277}
   - component: {fileID: 1748110272}
   - component: {fileID: 1748110271}
-  - component: {fileID: 1748110274}
   - component: {fileID: 1748110275}
-  - component: {fileID: 1748110277}
   - component: {fileID: 1748110276}
   m_Layer: 8
   m_Name: Dog
@@ -2920,7 +2950,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c1e54e24984fe884ebc0e0a17ce1b7af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 5.47, y: 4.81}
@@ -3011,6 +3041,17 @@ MonoBehaviour:
   WalkSpeed: 5
   Friction: 9
   JumpSpeed: 0
+--- !u!114 &1748110278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1748110270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c021364c8713e88449e6ac8a30e37e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1936748690
 GameObject:
   m_ObjectHideFlags: 0
