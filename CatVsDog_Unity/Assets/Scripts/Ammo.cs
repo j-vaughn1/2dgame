@@ -10,24 +10,42 @@ public class Ammo : MonoBehaviour {
 
     void OnExplode()
     {
-        Quaternion randomRotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
-        Instantiate(explosionBone, transform.position, randomRotation); // Particle effect post explosion
-        Destroy(boneAmmo, 1);
-        Destroy(explosionBone, 2);
-    }
+        int power = 5;
+        int radius = 2;
 
-    void OnCollisionEnter2D(Collision col)
-    {
-        if (col.gameObject.tag == "Floor")
+        Vector3 explosionPos = transform.position;
+        Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
+        foreach (Collider hit in colliders)
         {
-            OnExplode();
+            Rigidbody rb = hit.GetComponent<Rigidbody>();
+
+            if (rb != null)
+                rb.AddExplosionForce(power, explosionPos, radius, 3.0F);
+        }
+        Destroy(gameObject);
+            /*
+            Quaternion randomRotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
+            Instantiate(explosionBone, transform.position, randomRotation); // Particle effect post explosion
+            Destroy(boneAmmo, 1);
+            Destroy(explosionBone, 2);
+            */
         }
 
-        if(col.gameObject.tag == "Wall")
-        {
-            OnExplode();
+    
+
+        void Collision2D(Collision col)
+    {
+            if (col.gameObject.tag == "Floor")
+            {
+                OnExplode();
+            }
+
+            if (col.gameObject.tag == "Wall")
+            {
+                OnExplode();
+            }
+
         }
     
-    }
-
 }
+
