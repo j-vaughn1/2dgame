@@ -8,12 +8,17 @@ public class CatManager : MonoBehaviour {
     Movement catMovement;
     bool facingRight;
 
+    public int maxCatHealth = 1000;
+    private int currentCatHealth;
+    public BarUpdater catBar;
+
     // Use this for initialization
     void Start ()
     {
         anim = GetComponent<Animator>();
         catMovement = GetComponent<Movement>();
         facingRight = true;
+        currentCatHealth = maxCatHealth;
 	}
 
     public void FixedUpdate() {
@@ -30,6 +35,12 @@ public class CatManager : MonoBehaviour {
             anim.SetInteger("C_State", 0);
             break;
         }
+    }
+
+    public void Update()
+    {
+        catBar.maxValue = maxCatHealth;
+        catBar.currentValue = currentCatHealth;
     }
 
     private void Flip(float hor)

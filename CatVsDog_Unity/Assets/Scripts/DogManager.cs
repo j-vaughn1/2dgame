@@ -9,12 +9,16 @@ public class DogManager : MonoBehaviour
     Movement dogMovement;
     bool facingRight;
 
+    public int maxDogHealth = 1000;
+    private int currentDogHealth;
+    public BarUpdater dogBar;
+
     // Use this for initialization
     void Start()
     {
         anim = GetComponent<Animator>();
         dogMovement = GetComponent<Movement>();
-
+        currentDogHealth = maxDogHealth;
         
     }
 
@@ -32,6 +36,12 @@ public class DogManager : MonoBehaviour
             anim.SetInteger("D_State", 0);
             break;
         }
+    }
+
+    public void Update()
+    {
+        dogBar.maxValue = maxDogHealth;
+        dogBar.currentValue = currentDogHealth;
     }
 
     private void Flip(float hor) {
