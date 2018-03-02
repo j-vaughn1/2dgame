@@ -5,10 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Floor
-  - Bone
   - Cat
   - Dog
   - Wall
+  - Dog Bone
+  - Cat Bone
+  - Target
   layers:
   - Default
   - TransparentFX
@@ -51,4 +53,7 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 1292392487
+    locked: 0
+  - name: Ammo
+    uniqueID: 2688146337
     locked: 0

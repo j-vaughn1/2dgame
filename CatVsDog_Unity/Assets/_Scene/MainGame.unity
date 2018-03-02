@@ -328,7 +328,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!251 &399449894
 PlatformEffector2D:
@@ -483,7 +483,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 499677169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.52, y: -4.27, z: 0}
+  m_LocalPosition: {x: -10.96, y: -4.31, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -513,15 +513,15 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 20
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_AngularDrag: 0.5
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 2
+  m_Constraints: 0
 --- !u!114 &499677175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -785,6 +785,7 @@ GameObject:
   m_Component:
   - component: {fileID: 587846084}
   - component: {fileID: 587846085}
+  - component: {fileID: 587846086}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -824,6 +825,22 @@ MonoBehaviour:
   maxTurnTime: 10
   currentTurnTime: 10
   idleTime: 3
+--- !u!114 &587846086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 587846083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7323bd26e8765b14ca84289dc4bc26c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwPoint: {fileID: 0}
+  target: {fileID: 0}
+  bone: {fileID: 0}
+  timeHit: 3
+  accuracyDiviation: 2
 --- !u!1 &652231394
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,7 +983,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!251 &678266440
 PlatformEffector2D:
@@ -1282,7 +1299,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -2534,6 +2551,7 @@ GameObject:
   - component: {fileID: 1748110273}
   - component: {fileID: 1748110274}
   - component: {fileID: 1748110278}
+  - component: {fileID: 1748110279}
   - component: {fileID: 1748110277}
   - component: {fileID: 1748110272}
   - component: {fileID: 1748110271}
@@ -2614,7 +2632,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1748110270}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9, y: -4.25, z: 0}
+  m_LocalPosition: {x: 10.92, y: -4.25, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2669,10 +2687,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 20
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_AngularDrag: 0.5
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2703,6 +2721,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c021364c8713e88449e6ac8a30e37e34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1748110279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1748110270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7323bd26e8765b14ca84289dc4bc26c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwPoint: {fileID: 1748110273}
+  target: {fileID: 499677172}
+  bone: {fileID: 1402466490129276, guid: 91604bc4a77a6854696b8ad4c498199c, type: 2}
+  timeHit: 3
+  accuracyDiviation: 2
 --- !u!1 &1936748690
 GameObject:
   m_ObjectHideFlags: 0
@@ -2714,7 +2748,7 @@ GameObject:
   - component: {fileID: 1936748692}
   m_Layer: 5
   m_Name: Kitchen
-  m_TagString: Untagged
+  m_TagString: Dog Bone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

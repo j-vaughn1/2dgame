@@ -39,6 +39,9 @@ public class TurnManager : MonoBehaviour {
         {
             turnText.text = "Dog Turn";
             nextPlayerTurn = TurnEnum.Cat;
+
+            //Throw the bone
+            FindObjectOfType<AI>().Throw();
         }
         if (currentTurn == TurnEnum.None)
             turnText.text = "Wait!!";

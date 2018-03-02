@@ -3,11 +3,14 @@ using UnityEngine;
 
 public class Ammo : MonoBehaviour {
 
-    public GameObject boneAmmo;
+    public float ammoSpeed;
+    private Rigidbody2D ammo;
+
 
 
     void Start () {
-       
+        ammo = GetComponent<Rigidbody2D>();
+
     }
 
     void OnExplode()
@@ -15,7 +18,7 @@ public class Ammo : MonoBehaviour {
 
         Quaternion randomRotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
 
-        Instantiate(boneAmmo, transform.position, randomRotation); // Particle effect post explosion
+        Instantiate(ammo, transform.position, randomRotation); // Particle effect post explosion
     }
 
     void OnTriggerEnter2D(Collider2D col)
