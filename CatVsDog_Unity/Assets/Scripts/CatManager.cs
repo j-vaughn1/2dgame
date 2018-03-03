@@ -11,6 +11,7 @@ public class CatManager : MonoBehaviour {
     public int maxCatHealth = 1000;
     private int currentCatHealth;
     public BarUpdater catBar;
+    private bool isDead = false;
 
     // Use this for initialization
     void Start ()
@@ -41,6 +42,13 @@ public class CatManager : MonoBehaviour {
     {
         catBar.maxValue = maxCatHealth;
         catBar.currentValue = currentCatHealth;
+
+        if(currentCatHealth <= 0 && !isDead)
+        {
+            currentCatHealth = 0;
+            isDead = true;
+            anim.SetInteger("C_State", 3); //play dead animation
+        }
     }
 
     private void Flip(float hor)
@@ -56,5 +64,14 @@ public class CatManager : MonoBehaviour {
             transform.localScale = scale;
         }
 
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if(currentCatHealth > 0)
+        {
+            currentCatHealth -= damage;
+            anim.SetInteger("C_State", 2); //play "Hurt" animation
+        }
     }
 }

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212161178776511718}
   - component: {fileID: 50213882151191754}
   - component: {fileID: 70998595910867774}
+  - component: {fileID: 114454103512000650}
   m_Layer: 0
   m_Name: DogBone
   m_TagString: Dog Bone
@@ -77,6 +78,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.99, y: 0.4}
   m_Direction: 1
+--- !u!114 &114454103512000650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1402466490129276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615f2856738fd8446b6cf71c11c83907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212161178776511718
 SpriteRenderer:
   m_ObjectHideFlags: 1
