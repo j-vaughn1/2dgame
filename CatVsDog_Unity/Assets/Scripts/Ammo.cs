@@ -12,12 +12,14 @@ public class Ammo : MonoBehaviour {
     bool exploded = false;
     CircleCollider2D explosion_size;
 
+
+
     //**************************
 
     void Start()
     {
         explosion_size = gameObject.GetComponent<CircleCollider2D>();
-        
+
 
     }
 
@@ -31,6 +33,9 @@ public class Ammo : MonoBehaviour {
         {
             exploded = true;
         }
+
+
+
 
     }
 
@@ -48,7 +53,9 @@ public class Ammo : MonoBehaviour {
             {
                 Quaternion randomRotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
                 Instantiate(explosion, transform.position, randomRotation); // Particle effect post explosion
+                GetComponent<AudioSource>().Play(); // Play audio
                 Object.Destroy(this.gameObject.transform.parent.gameObject);    //when max size is reached, object is destroyed
+               
             }
             explosion_size.radius = current_size;
         }
@@ -78,6 +85,7 @@ public class Ammo : MonoBehaviour {
 
 
     }
+
 
 
 }
