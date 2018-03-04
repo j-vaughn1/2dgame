@@ -4,15 +4,16 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour {
-    private enum WalkDirection { None, Left, Right};
+    public enum WalkDirection { None, Left, Right};
     private Rigidbody2D rigidBody;
     private bool onFloor;
     private bool tryJump;
     private WalkDirection walkDir;
+    private bool walkDirSetThisFrame = false;
 
-    public float WalkSpeed = 9f;
-    public float Friction = 9f;
-    public float JumpSpeed = 30f;
+    public float WalkSpeed = 2f;
+    public float Friction = 10f;
+    public float JumpSpeed = 10f;
 
     // Use this for initialization
     void Start () {
@@ -32,6 +33,9 @@ public class Movement : MonoBehaviour {
     }
 
     public void FixedUpdate() {
+        if (!walkDirSetThisFrame)
+            walkDir = WalkDirection.None;
+
         switch (walkDir) {
         case WalkDirection.Left:
             rigidBody.velocity = new Vector2(-WalkSpeed, rigidBody.velocity.y);
@@ -43,22 +47,28 @@ public class Movement : MonoBehaviour {
             rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
             break;
         }
-        walkDir = WalkDirection.None;
         if (onFloor && tryJump)
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, JumpSpeed);
         tryJump = false;
+        walkDirSetThisFrame = false;
     }
 	
 	// These are called by other scripts
 	public void WalkLeft() {
         walkDir = WalkDirection.Left;
+        walkDirSetThisFrame = true;
         rigidBody.velocity = new Vector2(-WalkSpeed, rigidBody.velocity.y); // Want to apply the walk speed right away
     }
     public void WalkRight() {
         walkDir = WalkDirection.Right;
+        walkDirSetThisFrame = true;
         rigidBody.velocity = new Vector2(WalkSpeed, rigidBody.velocity.y); // Want to apply the walk speed right away
     }
     public void Jump() {
         tryJump = true;
+    }
+
+    public WalkDirection getState() {
+        return walkDir;
     }
 }

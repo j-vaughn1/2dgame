@@ -5,9 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - Floor
+<<<<<<< HEAD
   - Bone
   - Fire
   - Wall
+=======
+  - Cat
+  - Dog
+  - Wall
+  - Dog Bone
+  - Cat Bone
+  - Target
+>>>>>>> 4179a80ee3ddc5e478817e0f58074689fe01bdf4
   layers:
   - Default
   - TransparentFX
@@ -17,7 +26,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Cat Dog
   - 
   - 
   - 
@@ -45,6 +54,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 383501899
+    locked: 0
   - name: Character
     uniqueID: 1292392487
+    locked: 0
+  - name: Ammo
+    uniqueID: 2688146337
     locked: 0

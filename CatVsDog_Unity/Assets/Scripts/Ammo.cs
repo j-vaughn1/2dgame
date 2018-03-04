@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Ammo : MonoBehaviour {
 
+<<<<<<< HEAD
     public GameObject explosion;             //uses prefab of explosion
     public float explosion_delay = 1f;
     public float current_size = 0f;
@@ -13,6 +14,17 @@ public class Ammo : MonoBehaviour {
     CircleCollider2D explosion_size;
 
 
+=======
+    public float ammoSpeed;
+    private Rigidbody2D ammo;
+
+
+
+    void Start () {
+        ammo = GetComponent<Rigidbody2D>();
+
+    }
+>>>>>>> 4179a80ee3ddc5e478817e0f58074689fe01bdf4
 
     //**************************
 
@@ -21,6 +33,10 @@ public class Ammo : MonoBehaviour {
         explosion_size = gameObject.GetComponent<CircleCollider2D>();
 
 
+<<<<<<< HEAD
+=======
+        Instantiate(ammo, transform.position, randomRotation); // Particle effect post explosion
+>>>>>>> 4179a80ee3ddc5e478817e0f58074689fe01bdf4
     }
 
     //**************************
