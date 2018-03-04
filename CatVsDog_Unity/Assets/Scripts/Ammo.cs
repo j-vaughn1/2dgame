@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Ammo : MonoBehaviour {
 
-<<<<<<< HEAD
     public GameObject explosion;             //uses prefab of explosion
     public float explosion_delay = 1f;
     public float current_size = 0f;
@@ -14,29 +13,13 @@ public class Ammo : MonoBehaviour {
     CircleCollider2D explosion_size;
 
 
-=======
-    public float ammoSpeed;
-    private Rigidbody2D ammo;
-
-
-
-    void Start () {
-        ammo = GetComponent<Rigidbody2D>();
-
-    }
->>>>>>> 4179a80ee3ddc5e478817e0f58074689fe01bdf4
 
     //**************************
 
-    void Start()
-    {
+    void Start() {
         explosion_size = gameObject.GetComponent<CircleCollider2D>();
 
 
-<<<<<<< HEAD
-=======
-        Instantiate(ammo, transform.position, randomRotation); // Particle effect post explosion
->>>>>>> 4179a80ee3ddc5e478817e0f58074689fe01bdf4
     }
 
     //**************************
@@ -45,8 +28,7 @@ public class Ammo : MonoBehaviour {
     {
 
         explosion_delay -= Time.deltaTime;
-        if(explosion_delay < 0)
-        {
+        if (explosion_delay < 0) {
             exploded = true;
         }
 
@@ -59,19 +41,15 @@ public class Ammo : MonoBehaviour {
 
     void FixedUpdate()                                     //physics of the explosion is updated here
     {
-        if(exploded == true)
-        {
+        if (exploded == true) {
             if (current_size < explosion_max_size)         //explosion increases in size until max size is reached
             {
                 current_size += explosion_rate;
-            }
-            else
-            {
+            } else {
                 Quaternion randomRotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
                 Instantiate(explosion, transform.position, randomRotation); // Particle effect post explosion
-                GetComponent<AudioSource>().Play(); // Play audio
-                Object.Destroy(this.gameObject.transform.parent.gameObject);    //when max size is reached, object is destroyed
-               
+                Object.Destroy(this.transform.parent.gameObject);    //when max size is reached, object is destroyed
+
             }
             explosion_size.radius = current_size;
         }
@@ -82,10 +60,9 @@ public class Ammo : MonoBehaviour {
 
     void onTriggerEnter2D(Collision col)                               //bone explosion physics
     {
-        if(exploded == true)
-        {
+        if (exploded == true) {
 
-            if(col.gameObject.GetComponent<Rigidbody2D>() != null)     //explosion force
+            if (col.gameObject.GetComponent<Rigidbody2D>() != null)     //explosion force
             {
                 Vector2 target = col.gameObject.transform.position;
                 Vector2 bomb = gameObject.transform.position;
@@ -93,7 +70,7 @@ public class Ammo : MonoBehaviour {
                 Vector2 direction = 5f * (target - bomb);
                 Rigidbody2D rb = col.gameObject.GetComponent<Rigidbody2D>();
 
-                rb.AddForce(new Vector2(direction.x, direction.y *2f));  //split the force between x and y components so either can be adjusted
+                rb.AddForce(new Vector2(direction.x, direction.y * 2f));  //split the force between x and y components so either can be adjusted
 
             }
 
@@ -105,4 +82,3 @@ public class Ammo : MonoBehaviour {
 
 
 }
-
