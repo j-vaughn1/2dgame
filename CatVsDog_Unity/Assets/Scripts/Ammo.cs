@@ -48,7 +48,7 @@ public class Ammo : MonoBehaviour {
             } else {
                 Quaternion randomRotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
                 Instantiate(explosion, transform.position, randomRotation); // Particle effect post explosion
-                Object.Destroy(this.transform.parent.gameObject);    //when max size is reached, object is destroyed
+                Object.Destroy(this.transform.gameObject);    //when max size is reached, object is destroyed
 
             }
             explosion_size.radius = current_size;
