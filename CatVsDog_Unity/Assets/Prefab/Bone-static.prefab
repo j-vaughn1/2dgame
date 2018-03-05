@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212415729694695658}
   - component: {fileID: 50860043866931598}
   - component: {fileID: 70050868221433378}
+  - component: {fileID: 114217318189275232}
   m_Layer: 0
   m_Name: Bone-static
   m_TagString: Bone-static
@@ -72,11 +73,24 @@ CapsuleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: -0.0000000047366893, y: -0.037817664}
   m_Size: {x: 2.980002, y: 0.86411136}
   m_Direction: 1
+--- !u!114 &114217318189275232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1631182805792912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2515ae5b2d5c6ae48992563c456ac4b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bone_death: 15
+  bone_time: 0
 --- !u!212 &212415729694695658
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -28,37 +28,48 @@ public class TurnManager : MonoBehaviour {
         currentTurn = newTurn;
 
         if (currentTurn != TurnEnum.None)
+        {
             currentTurnTime = maxTurnTime;
+        }
         else
+        {
             currentTurnTime = idleTime;
+        }
 
         catMover.enabled = (currentTurn == TurnEnum.Cat);
         dogMover.enabled = (currentTurn == TurnEnum.Dog);
+
         if (currentTurn == TurnEnum.Cat)
-        {   //kill all bones and spawn cat bones
-            Object.Destroy(this.gameObject);
+        {   //spawn cat bones
             Spawn(2);
             turnText.text = "Cat Turn";
-            nextPlayerTurn = TurnEnum.Dog;
+            nextPlayerTurn = TurnEnum.Dog;          
         }
+
         if (currentTurn == TurnEnum.Dog)
-        {//kill all bones and spawn dog bones
-            Object.Destroy(this.gameObject);
+        {//spawn dog bones
             Spawn(1);
             turnText.text = "Dog Turn";
             nextPlayerTurn = TurnEnum.Cat;
-
+            
             //Throw the bone
             FindObjectOfType<AI>().Throw();
         }
+
         if (currentTurn == TurnEnum.None)
+        { //destroy all the bones
+            DestroyBones(GameObject.FindGameObjectsWithTag("Bone"));
             turnText.text = "Wait!!";
+        }
         
     }
+
+    //**************************************
     public void StartNextPlayerTurn() {
         StartTurn(nextPlayerTurn);
     }
 
+    //*********************************
     public TurnEnum getTurn() {
         return currentTurn;
     }
@@ -103,22 +114,32 @@ public class TurnManager : MonoBehaviour {
     {
     if(types == 1)
         {
-            float yPos = .5f;                        //spawn the bone at a random location
-            float xPos = Random.Range(-8f, 8f);
-            var curPos = new Vector3(xPos, yPos);
-            Instantiate(DogBones, curPos, transform.rotation);
-        }
+
+                float yPos = .5f;                        //spawn the bone at a random location
+                float xPos = Random.Range(-8f, 8f);
+                var curPos = new Vector3(xPos, yPos);
+                Instantiate(DogBones, curPos, transform.rotation);
+            }
+        
 
     else
         {
-            float yPos = .5f;                        //spawn the bone at a random location
-            float xPos = Random.Range(-8f, 8f);
-            var curPos = new Vector3(xPos, yPos);
-            Instantiate(CatBones, curPos, transform.rotation);
+
+                float yPos = .5f;                        //spawn the bone at a random location
+                float xPos = Random.Range(-8f, 8f);
+                var curPos = new Vector3(xPos, yPos);
+                Instantiate(CatBones, curPos, transform.rotation);
+            
         }
 
-        
+       
+    }
 
+    void DestroyBones(GameObject[] x)
+    {
+        int i = 0;
 
+        while(x[i] != null)
+        Destroy(x[i]);
     }
 }

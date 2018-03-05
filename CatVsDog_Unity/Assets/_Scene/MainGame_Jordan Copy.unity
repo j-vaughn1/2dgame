@@ -824,6 +824,8 @@ MonoBehaviour:
   maxTurnTime: 3
   currentTurnTime: 10
   idleTime: 3
+  DogBones: {fileID: 1631182805792912, guid: 226884c29c5c0c64592de389a5ea8c86, type: 2}
+  CatBones: {fileID: 1653920960318436, guid: 0c48800cab26a714aa40a023c1508687, type: 2}
 --- !u!1 &652231394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1744,48 +1746,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1150906708}
---- !u!1 &1170999494
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1170999496}
-  - component: {fileID: 1170999495}
-  m_Layer: 0
-  m_Name: SpawnController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1170999495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1170999494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdac0697c6cb8204597a0e9835bf5131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawn_delay: 10
-  Bones: {fileID: 1402466490129276, guid: 91604bc4a77a6854696b8ad4c498199c, type: 2}
---- !u!4 &1170999496
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1170999494}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.284049, y: -3.7278798, z: 0.71078146}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1215755468
 GameObject:
   m_ObjectHideFlags: 0
