@@ -111,6 +111,10 @@ MonoBehaviour:
   explosion_max_size: 2
   explosion_rate: 2
   explosion_speed: 1
+<<<<<<< HEAD
+=======
+  catBoneImg: {fileID: 21300000, guid: add2c89917d2566498d840be48c16335, type: 3}
+>>>>>>> e51cf565b06358e89076a25895f66179d30cf750
   throwingObj: {fileID: 0}
 --- !u!212 &212161178776511718
 SpriteRenderer:
