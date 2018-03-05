@@ -29,7 +29,7 @@ public class Ammo : MonoBehaviour {
 
     //**************************
 
-    void Update()                        //a timer for the explosion
+    void Update()                                    //a timer for the explosion
     {
         explosion_delay -= Time.deltaTime;
         if (explosion_delay < 0 && !exploded) {
@@ -51,6 +51,11 @@ public class Ammo : MonoBehaviour {
             dog.TakeDamage(damage);
             exploded = true;
         }
+        if(col.gameObject.tag == "Wall" && !exploded)
+        {
+            exploded = true;
+        }
+
     }
 
     //*****************************
@@ -63,17 +68,9 @@ public class Ammo : MonoBehaviour {
                 current_size += explosion_rate;
             } else {
                 Quaternion randomRotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
-<<<<<<< HEAD
-                Instantiate(explosion, transform.position, randomRotation); // Particle effect post explosion
-                Object.Destroy(this.transform.gameObject);    //when max size is reached, object is destroyed
-
-=======
-                Destroy(
-                    Instantiate(explosion, transform.position + new Vector3(0,0,-.1f), randomRotation), // Particle effect post explosion
-                    1
-                );
+                Destroy(Instantiate(explosion, transform.position + new Vector3(0,0,-.1f), randomRotation), 1);
                 Object.Destroy(this.gameObject);    //when max size is reached, object is destroyed
->>>>>>> 9d2a2fa0aa16859818822f8607ce0d26dcfe3f06
+
             }
             explosion_size.radius = current_size;
         }
@@ -91,7 +88,7 @@ public class Ammo : MonoBehaviour {
                 Vector2 target = col.gameObject.transform.position;
                 Vector2 bomb = gameObject.transform.position;
 
-                Vector2 direction = 5f * (target - bomb);
+                Vector2 direction = 10f * (target - bomb);
                 Rigidbody2D rb = col.gameObject.GetComponent<Rigidbody2D>();
 
                 rb.AddForce(new Vector2(direction.x, direction.y * 2f));  //split the force between x and y components so either can be adjusted

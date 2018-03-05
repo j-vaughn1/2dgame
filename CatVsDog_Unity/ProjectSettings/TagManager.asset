@@ -4,9 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Fire
-  - Dog Bone
-  - Bone
+  - Bone-static
   layers:
   - Default
   - TransparentFX
