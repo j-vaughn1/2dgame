@@ -34,6 +34,7 @@ public class AI : MonoBehaviour {
         yVelocity = totalVelocity * Mathf.Sin(throwAngle);
 
         GameObject boneInstance = Instantiate(bone, throwPoint.position, Quaternion.Euler(new Vector3(0, 0, 0))) as GameObject;
+        boneInstance.GetComponent<Ammo>().throwingObj = this.gameObject;
 
         Rigidbody2D rigid;
         rigid = boneInstance.GetComponent<Rigidbody2D>();

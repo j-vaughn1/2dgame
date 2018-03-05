@@ -4,7 +4,7 @@ using UnityEngine;
 public class Ammo : MonoBehaviour {
 
     public GameObject explosion;             //uses prefab of explosion
-    public float explosion_delay = 1f;
+    public float explosion_delay = 10f;
     public float current_size = 0f;
     public float explosion_max_size = 5f;
     public float explosion_rate = 1f;
@@ -12,29 +12,45 @@ public class Ammo : MonoBehaviour {
     bool exploded = false;
     CircleCollider2D explosion_size;
 
+    private CatManager cat;
+    private DogManager dog;
+    public GameObject throwingObj = null;
+
+    private int damage = 100; //fix damage dealt when hit
 
 
     //**************************
 
     void Start() {
         explosion_size = gameObject.GetComponent<CircleCollider2D>();
-
-
+        cat = FindObjectOfType<CatManager>();
+        dog = FindObjectOfType<DogManager>();
     }
 
     //**************************
 
     void Update()                        //a timer for the explosion
     {
-
         explosion_delay -= Time.deltaTime;
-        if (explosion_delay < 0) {
+        if (explosion_delay < 0 && !exploded) {
             exploded = true;
         }
+    }
 
-
-
-
+    void OnTriggerEnter2D(Collider2D col) {
+        // Don't hurt yourself
+        if (col.gameObject == throwingObj)
+            return;
+        if (col.gameObject.tag == "Cat" && !exploded) // If the coconut collides with a "Cat"
+        {
+            cat.TakeDamage(damage);
+            exploded = true;
+        }
+        if (col.gameObject.tag == "Dog" && !exploded) // If the coconut collides with a "Dog"
+        {
+            dog.TakeDamage(damage);
+            exploded = true;
+        }
     }
 
     //*****************************
@@ -47,9 +63,11 @@ public class Ammo : MonoBehaviour {
                 current_size += explosion_rate;
             } else {
                 Quaternion randomRotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
-                Instantiate(explosion, transform.position, randomRotation); // Particle effect post explosion
-                Object.Destroy(this.transform.parent.gameObject);    //when max size is reached, object is destroyed
-
+                Destroy(
+                    Instantiate(explosion, transform.position + new Vector3(0,0,-.1f), randomRotation), // Particle effect post explosion
+                    1
+                );
+                Object.Destroy(this.gameObject);    //when max size is reached, object is destroyed
             }
             explosion_size.radius = current_size;
         }

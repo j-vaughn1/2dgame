@@ -56,4 +56,12 @@ public class DogManager : MonoBehaviour
         }
 
     }
+
+
+    public void TakeDamage(int damage) {
+        if (currentDogHealth > 0) {
+            currentDogHealth -= damage;
+            anim.SetInteger("D_State", 2); //play "Hurt" animation
+        }
+    }
 }
