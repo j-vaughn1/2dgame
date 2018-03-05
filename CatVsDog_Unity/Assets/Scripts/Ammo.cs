@@ -14,6 +14,7 @@ public class Ammo : MonoBehaviour {
 
     private CatManager cat;
     private DogManager dog;
+    private TurnManager turnManager;
     public GameObject throwingObj = null;
 
     private int damage = 100; //fix damage dealt when hit
@@ -25,6 +26,7 @@ public class Ammo : MonoBehaviour {
         explosion_size = gameObject.GetComponent<CircleCollider2D>();
         cat = FindObjectOfType<CatManager>();
         dog = FindObjectOfType<DogManager>();
+        turnManager = FindObjectOfType<TurnManager>();
     }
 
     //**************************
@@ -51,7 +53,7 @@ public class Ammo : MonoBehaviour {
             dog.TakeDamage(damage);
             exploded = true;
         }
-        if(col.gameObject.tag == "Wall" && !exploded)
+        if((col.gameObject.tag == "Wall" || col.gameObject.tag == "Floor") && !exploded)
         {
             exploded = true;
         }
@@ -70,36 +72,9 @@ public class Ammo : MonoBehaviour {
                 Quaternion randomRotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
                 Destroy(Instantiate(explosion, transform.position + new Vector3(0,0,-.1f), randomRotation), 1);
                 Object.Destroy(this.gameObject);    //when max size is reached, object is destroyed
-
+                turnManager.EndPlayersTurn();
             }
             explosion_size.radius = current_size;
         }
     }
-
-
-    //*****************************
-
-    void onTriggerEnter2D(Collision col)                               //bone explosion physics
-    {
-        if (exploded == true) {
-
-            if (col.gameObject.GetComponent<Rigidbody2D>() != null)     //explosion force
-            {
-                Vector2 target = col.gameObject.transform.position;
-                Vector2 bomb = gameObject.transform.position;
-
-                Vector2 direction = 10f * (target - bomb);
-                Rigidbody2D rb = col.gameObject.GetComponent<Rigidbody2D>();
-
-                rb.AddForce(new Vector2(direction.x, direction.y * 2f));  //split the force between x and y components so either can be adjusted
-
-            }
-
-        }
-
-
-    }
-
-
-
 }

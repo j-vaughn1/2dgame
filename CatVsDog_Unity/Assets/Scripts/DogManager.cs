@@ -8,10 +8,13 @@ public class DogManager : MonoBehaviour
     Animator anim;
     Movement dogMovement;
     bool facingRight;
+    private bool isDead = false;
 
     public int maxDogHealth = 1000;
     private int currentDogHealth;
     public BarUpdater dogBar;
+
+    private TurnManager turnManager;
 
     // Use this for initialization
     void Start()
@@ -19,7 +22,7 @@ public class DogManager : MonoBehaviour
         anim = GetComponent<Animator>();
         dogMovement = GetComponent<Movement>();
         currentDogHealth = maxDogHealth;
-        
+        turnManager = FindObjectOfType<TurnManager>();
     }
 
     public void FixedUpdate() {
@@ -38,13 +41,13 @@ public class DogManager : MonoBehaviour
         }
     }
 
-    public void Update()
-    {
+    public void Update() {
+        dogBar.suffixStr = "/" + maxDogHealth;
         dogBar.maxValue = maxDogHealth;
         dogBar.currentValue = currentDogHealth;
     }
 
-    private void Flip(float hor) {
+    public void Flip(float hor) {
         if (hor > 0 && !facingRight || hor < 0 && facingRight) {
             facingRight = !facingRight;
 
@@ -62,6 +65,13 @@ public class DogManager : MonoBehaviour
         if (currentDogHealth > 0) {
             currentDogHealth -= damage;
             anim.SetInteger("D_State", 2); //play "Hurt" animation
+        }
+        if (currentDogHealth <= 0 && !isDead)
+        {
+            currentDogHealth = 0;
+            isDead = true;
+            anim.SetInteger("D_State", 3); //play dead animation
+            turnManager.SetGameOver();
         }
     }
 }

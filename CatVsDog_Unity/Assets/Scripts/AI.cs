@@ -2,8 +2,8 @@
 using System.Collections;
 
 
-public class AI : MonoBehaviour {
-
+public class AI : MonoBehaviour
+{
     public Transform throwPoint; // the position where the object is thrown
     public Transform target;
     public GameObject bone;
@@ -11,8 +11,19 @@ public class AI : MonoBehaviour {
     public float timeHit = 3f; // in second
     public float accuracyDiviation = 2f;
 
-    private DogManager dog;
-    private CatManager cat;
+    private Transform boneTransform;
+    private Movement pMovement;
+    private float walkingDistance;
+    private bool _foundBone = false;
+
+    public bool foundBone
+    {
+        get { return _foundBone; }
+        set
+        {
+            _foundBone = value;
+        }
+    }
 
     public void Throw()
     {
@@ -40,5 +51,46 @@ public class AI : MonoBehaviour {
         rigid = boneInstance.GetComponent<Rigidbody2D>();
 
         rigid.velocity = new Vector2(xVelocity, yVelocity);
+    }
+
+    public void Walk()
+    {
+        pMovement = GetComponent<Movement>();
+        boneTransform = GameObject.FindGameObjectWithTag("Bone-static").transform;
+
+        walkingDistance = boneTransform.position.x - throwPoint.position.x;
+
+        if (!_foundBone)
+        {
+            if (walkingDistance < 0)
+            {
+                pMovement.WalkLeft();
+            }
+
+            else if (walkingDistance > 0)
+            {
+                pMovement.WalkRight();
+            }
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (!this.enabled) // Don't throw bones when disabled
+            return;
+        
+        if (coll.gameObject.tag == "Bone-static" && !foundBone)
+        {
+            Destroy(coll.gameObject);
+            _foundBone = true;
+            pMovement = GetComponent<Movement>();
+            pMovement.WalkLeft();
+        }
+        
+    }
+
+    void Update()
+    {
+        Walk();
     }
 }

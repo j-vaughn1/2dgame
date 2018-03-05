@@ -13,6 +13,8 @@ public class CatManager : MonoBehaviour {
     public BarUpdater catBar;
     private bool isDead = false;
 
+    private TurnManager turnManager;
+
     // Use this for initialization
     void Start ()
     {
@@ -20,7 +22,8 @@ public class CatManager : MonoBehaviour {
         catMovement = GetComponent<Movement>();
         facingRight = true;
         currentCatHealth = maxCatHealth;
-	}
+        turnManager = FindObjectOfType<TurnManager>();
+    }
 
     public void FixedUpdate() {
         switch (catMovement.getState()) {
@@ -40,6 +43,7 @@ public class CatManager : MonoBehaviour {
 
     public void Update()
     {
+        catBar.suffixStr = "/" + maxCatHealth;
         catBar.maxValue = maxCatHealth;
         catBar.currentValue = currentCatHealth;
 
@@ -48,10 +52,11 @@ public class CatManager : MonoBehaviour {
             currentCatHealth = 0;
             isDead = true;
             anim.SetInteger("C_State", 3); //play dead animation
+            turnManager.SetGameOver();
         }
     }
 
-    private void Flip(float hor)
+    public void Flip(float hor)
     {
         if(hor > 0 && !facingRight || hor < 0 && facingRight)
         {

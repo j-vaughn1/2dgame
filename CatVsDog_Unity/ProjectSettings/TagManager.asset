@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bone-static
+  - Fire
+  - Dog Bone
+  - Bone
+  - Wall
+  - Cat
+  - Floor
+  - Dog
   layers:
   - Default
   - TransparentFX

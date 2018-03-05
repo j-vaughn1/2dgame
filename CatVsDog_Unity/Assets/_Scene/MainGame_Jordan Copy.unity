@@ -2719,7 +2719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwPoint: {fileID: 1748110273}
   target: {fileID: 499677172}
-  bone: {fileID: 1402466490129276, guid: 91604bc4a77a6854696b8ad4c498199c, type: 2}
+  bone: {fileID: 1402466490129276, guid: 6e1ea2731040fbe449075e307260e6d4, type: 2}
   timeHit: 3
   accuracyDiviation: 0
 --- !u!1 &1936748690

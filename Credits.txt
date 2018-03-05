@@ -1,0 +1,30 @@
+Images:
+------------------------
+Cat & Dog
+	https://www.gameart2d.com/cat-and-dog-free-sprites.html
+	Licensed under the Creative Commons 0 License.
+
+Fish Bone based off of Dog Bone & Inspired by this image
+	http://www.dailyembroidery.com/product/fish-bones-cartoon-available-in-both-applique-and-stitched/
+	(Found via Google Images)
+
+Sounds
+------------------------
+Cat Meow
+	https://freesound.org/people/tuberatanka/sounds/110011/
+	by tuberatanka of freesound.org
+	Licensed under the Creative Commons 0 License.
+Dog Whimper
+	https://freesound.org/people/Soundscape_Leuphana/sounds/210440/
+	by Soundscape_Leuphana of freesound.org
+	Licensed under the Creative Commons 0 License.
+Thunk sound
+	https://freesound.org/people/SocializedArtist45/sounds/266595/
+	by SocializedArtist45 of freesound.org
+	Licensed under the Attribution License.
+
+Music:
+------------------------
+Fig Leaf Times Two Kevin MacLeod (incompetech.com)
+	Licensed under Creative Commons: By Attribution 3.0 License
+	http://creativecommons.org/licenses/by/3.0/
