@@ -2767,7 +2767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71e78ab75c90da47922519bf89d5be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDogHealth: 1000
+  maxDogHealth: 100
   dogBar: {fileID: 1215755472}
 --- !u!61 &1748110275
 BoxCollider2D:
@@ -2843,7 +2843,7 @@ MonoBehaviour:
   target: {fileID: 499677172}
   bone: {fileID: 1402466490129276, guid: 55a150edda942864da8305d15bea3069, type: 2}
   timeHit: 3
-  accuracyDiviation: 2
+  accuracyDiviation: 0
 --- !u!1 &1874271373
 GameObject:
   m_ObjectHideFlags: 0
