@@ -12,6 +12,8 @@ TagManager:
   - Cat
   - Floor
   - Dog
+  - Ammo-Static
+  - Ammo-Dynamic
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Character
   - 
   - 
   - 

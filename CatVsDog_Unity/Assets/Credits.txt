@@ -8,6 +8,34 @@ Fish Bone based off of Dog Bone & Inspired by this image
 	http://www.dailyembroidery.com/product/fish-bones-cartoon-available-in-both-applique-and-stitched/
 	(Found via Google Images)
 
+Heart & Bar Images
+Music & Sound Button Images
+Reference for other button backgrounds
+	https://graphicburger.com/mobile-game-gui/
+	"Images are royalty free to use in both personal and commercial projects"
+
+Paw Print
+	https://en.m.wikipedia.org/wiki/File:Black_Paw.svg
+	by Indolences of wikimedia.org
+	Released into the Public Domain
+
+Wooden Tables
+	https://www.freepik.com/free-vector/wooden-tables_798193.htm
+	by Freepiks
+	Released into the Public Domain
+
+Kitchen Illustration
+	https://www.vecteezy.com/vector-art/140315-free-vector-kitchen-illustration
+	by frankmib6
+	Released into the Public Domain
+
+Dog Poster
+	by Jordan
+
+Cat Poster
+	https://pxhere.com/en/photo/650106
+	Released under the Creative Commons CC0
+
 Sounds
 ------------------------
 Cat Meow
@@ -23,8 +51,43 @@ Thunk sound
 	by SocializedArtist45 of freesound.org
 	Licensed under the Attribution License.
 
+Thud Light Thud 1
+	https://freesound.org/people/sgrowe/sounds/342533/
+	By: Sgrowe
+	Licensed under the Creative Commons 0 License.
+
+
+Splat 2
+	https://www.freesoundeffects.com/free-track/splat2-466435/
+	By: Partners In Rhyme
+	Licensed under Creative Commons: By Attribution 3.0 License
+
+Cup Drop
+	https://freesound.org/people/davdud101/sounds/150501/
+	By: davdud101
+	Licensed under the Creative Commons 0 License.
+
+Thrown Object
+	https://freesound.org/people/Bexhillcollege/sounds/272065/
+	By: Bexhillcollege
+	Licensed under the Creative Commons 0 License.
+
+Menu Click
+	https://freesound.org/people/GameAudio/sounds/220197/
+	By: GameAudio
+	Licensed under the Creative Commons 0 License.
+
+Pause
+	https://freesound.org/people/loofa/sounds/23783/
+	By: loofa
+	Licensed under Attribution Noncommercial License.
+
 Music:
 ------------------------
 Fig Leaf Times Two Kevin MacLeod (incompetech.com)
+	Licensed under Creative Commons: By Attribution 3.0 License
+	http://creativecommons.org/licenses/by/3.0/
+
+Fluffing a Duck Kevin MacLeod (incompetech.com)
 	Licensed under Creative Commons: By Attribution 3.0 License
 	http://creativecommons.org/licenses/by/3.0/
